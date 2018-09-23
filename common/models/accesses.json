@@ -1,0 +1,76 @@
+{
+    "name": "accesses",
+    "properties": {
+        "id": {
+            "type": "Number",
+            "required": true,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "id": 1,
+            "mysql": {
+                "columnName": "id",
+                "dataType": "int",
+                "dataLength": null,
+                "dataPrecision": 10,
+                "dataScale": 0,
+                "nullable": "N"
+            },
+            "updateOnly": false
+        },
+        "id_bp": {
+            "type": "Number",
+            "required": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "mysql": {
+                "columnName": "id_bp",
+                "dataType": "int",
+                "dataLength": null,
+                "dataPrecision": 10,
+                "dataScale": 0,
+                "nullable": "Y"
+            },
+            "id_bp": true
+
+        },
+        "id_project_role": {
+            "type": "Number",
+            "required": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "mysql": {
+                "columnName": "id_project_role",
+                "dataType": "int",
+                "dataLength": null,
+                "dataPrecision": 10,
+                "dataScale": 0,
+                "nullable": "Y"
+            }
+        }
+    },
+    "relations": {
+        "roles": {
+            "model": "roles",
+            "type": "belongsTo",
+            "foreignKey": "id_project_role"
+        },
+        "processes": {
+            "model": "processes",
+            "type": "belongsTo",
+            "foreignKey": "id_bp"
+        }
+    },
+    "settings": {
+        "strict": false,
+        "forceId": false,
+        "replaceOnPUT": true,
+        "idInjection": false,
+        "mysql": {
+            "schema": "db",
+            "table": "accesses"
+        }
+    }
+}

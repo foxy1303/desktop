@@ -1,0 +1,174 @@
+{
+    "name": "employees",
+    "properties": {
+        "admin": {
+            "type": "Number",
+            "required": false,
+            "length": null,
+            "precision": 3,
+            "scale": 0,
+            "mysql": {
+                "columnName": "admin",
+                "dataType": "tinyint",
+                "dataLength": null,
+                "dataPrecision": 3,
+                "dataScale": 0,
+                "nullable": "Y"
+            }
+        },
+        "email": {
+            "type": "String",
+            "required": false,
+            "length": 255,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "email",
+                "dataType": "varchar",
+                "dataLength": 255,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "id": {
+            "type": "Number",
+            "required": true,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "id": 1,
+            "mysql": {
+                "columnName": "id",
+                "dataType": "int",
+                "dataLength": null,
+                "dataPrecision": 10,
+                "dataScale": 0,
+                "nullable": "N"
+            },
+            "updateOnly": false
+        },
+        "name": {
+            "type": "String",
+            "required": false,
+            "length": 255,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "name",
+                "dataType": "varchar",
+                "dataLength": 255,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "password": {
+            "type": "String",
+            "required": true,
+            "length": 255,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "password",
+                "dataType": "varchar",
+                "dataLength": 255,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "N"
+            }
+        },
+        "position": {
+            "type": "String",
+            "required": false,
+            "length": 255,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "position",
+                "dataType": "varchar",
+                "dataLength": 255,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "project_role": {
+            "type": "Number",
+            "required": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "mysql": {
+                "columnName": "project_role",
+                "dataType": "int",
+                "dataLength": null,
+                "dataPrecision": 10,
+                "dataScale": 0,
+                "nullable": "Y"
+            }
+        },
+        "services": {
+            "type": "String",
+            "required": false,
+            "length": null,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "services",
+                "dataType": "json",
+                "dataLength": null,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "subdivision": {
+            "type": "String",
+            "required": false,
+            "length": 65535,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "subdivision",
+                "dataType": "text",
+                "dataLength": 65535,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "timesheet": {
+            "type": "Number",
+            "required": false,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "mysql": {
+                "columnName": "timesheet",
+                "dataType": "int",
+                "dataLength": null,
+                "dataPrecision": 10,
+                "dataScale": 0,
+                "nullable": "Y"
+            }
+        }
+    },
+    "relations": {
+        "roles": {
+            "model": "roles",
+            "type": "belongsTo",
+            "foreignKey": "project_role"
+        }
+    },
+    "settings": {
+        "strict": false,
+        "forceId": false,
+        "replaceOnPUT": true,
+        "idInjection": false,
+        "mysql": {
+            "schema": "db",
+            "table": "employees"
+        }
+    }
+}

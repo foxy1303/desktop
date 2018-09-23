@@ -1,0 +1,84 @@
+{
+    "name": "processes",
+    "properties": {
+        "id": {
+            "type": "Number",
+            "required": true,
+            "length": null,
+            "precision": 10,
+            "scale": 0,
+            "id": 1,
+            "mysql": {
+                "columnName": "id",
+                "dataType": "int",
+                "dataLength": null,
+                "dataPrecision": 10,
+                "dataScale": 0,
+                "nullable": "N"
+            },
+            "updateOnly": false
+        },
+        "text": {
+            "type": "String",
+            "required": false,
+            "length": 255,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "text",
+                "dataType": "varchar",
+                "dataLength": 255,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "title": {
+            "type": "String",
+            "required": false,
+            "length": 255,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "title",
+                "dataType": "varchar",
+                "dataLength": 255,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        },
+        "url": {
+            "type": "String",
+            "required": false,
+            "length": 255,
+            "precision": null,
+            "scale": null,
+            "mysql": {
+                "columnName": "url",
+                "dataType": "varchar",
+                "dataLength": 255,
+                "dataPrecision": null,
+                "dataScale": null,
+                "nullable": "Y"
+            }
+        }
+    },
+    "relations": {
+        "accesses": {
+            "model": "accesses",
+            "type": "hasMany",
+            "foreignKey": "id_bp"
+        }
+    },
+    "settings": {
+        "strict": false,
+        "forceId": false,
+        "replaceOnPUT": true,
+        "idInjection": false,
+        "mysql": {
+            "schema": "db",
+            "table": "processes"
+        }
+    }
+}

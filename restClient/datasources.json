@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "sbt_datasource": {
+    "host": "LAPTOP-5MHEL4G0",
+    "port": 3306,
+    "url": "mysql://root:12345@127.0.0.1/db",
+    "database": "db",
+    "password": "12345",
+    "name": "sbt_datasource",
+    "user": "root",
+    "connector": "mysql"
+  }
+}
