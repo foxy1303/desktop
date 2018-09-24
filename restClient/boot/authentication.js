@@ -1,6 +1,6 @@
 'use strict';
 
 module.exports = function enableAuthentication(server) {
-  // enable authentication
+  // enable basic authentication
   server.enableAuth();
 };
