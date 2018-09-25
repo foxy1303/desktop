@@ -1,4 +1,4 @@
-# My Application
+# СПИМ-ТИМ (Смоленск, Пенза, Ижевск, Москва)
 
 The project is created by "<СПИМ> creation team"
 
