@@ -1,8 +1,10 @@
 {
+//коннектим базу
   "db": {
     "name": "db",
     "connector": "memory"
   },
+ //строка подключения
   "sbt_datasource": {
     "host": "LAPTOP-5MHEL4G0",
     "port": 3306,
